@@ -1,0 +1,24 @@
+{
+  "name": "engine-remark-lint",
+  "version": "0.0.2",
+  "description": "Docker container that wrap remark-lint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plataformatec/engine-remark-lint.git"
+  },
+  "scripts": {
+    "test": "node test/test_helper.js"
+  },
+  "author": "Plataformatec <opensource@plataformatec.com.br>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "fs-jetpack": "^0.7.1",
+    "glob": "^7.0.0",
+    "remark": "^4.1.1",
+    "remark-lint": "^3.0.0"
+  },
+  "engine": "node >= 5.4.0",
+  "devDependencies": {
+    "qunit-tap": "^1.5.0"
+  }
+}

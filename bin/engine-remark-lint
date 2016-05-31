@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+var fs = require('fs');
+var Engine = require('../lib/engine');
+
+// TODO: set defaults
+var engineConfig = {
+  include_paths: [],  // eslint-disable-line camelcase
+  exclude_paths: []   // eslint-disable-line camelcase
+};
+
+if (fs.existsSync('/config.json')) {
+  var overrides = JSON.parse(fs.readFileSync('/config.json'));
+  engineConfig = Object.assign(engineConfig, overrides);
+}
+
+var directory = process.argv[2] || '/code';
+var engine = new Engine(directory, engineConfig, process.stdout);
+engine.run();
