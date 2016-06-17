@@ -37,4 +37,14 @@ QUnit.test('analyzes the markdown files of a directory', function(assert) {
   assert.equal(issue.location.path, 'README.md');
   assert.equal(issue.location.lines.begin, 3);
   assert.equal(issue.location.lines.end, 3);
+
+  issue = stream.read();
+
+  assert.equal(issue.type, 'issue');
+  assert.deepEqual(issue.categories, ['Style']);
+  assert.equal(issue.check_name, 'maximum-line-length');
+  assert.equal(issue.description, 'Line must be at most 80 characters');
+  assert.equal(issue.location.path, 'README.md');
+  assert.equal(issue.location.lines.begin, 5);
+  assert.equal(issue.location.lines.end, 5);
 });
