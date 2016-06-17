@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app/
 
 RUN apk --update add git && \
-    npm install --production && \
+    npm install && \
     apk del --purge git
 
 COPY . /usr/src/app
