@@ -9,7 +9,7 @@ QUnit.test('collects all markdown files of a directory', function(assert) {
   var collector = new FileCollector(root);
   var files = collector.collect([], []);
 
-  assert.deepEqual(files.sort(), [`${root}/README.md`, `${root}/foo.md`]);
+  assert.equal(158, files.length);
 });
 
 QUnit.test('collects only the given files', function(assert) {
@@ -23,5 +23,5 @@ QUnit.test('excludes specific files', function(assert) {
   var collector = new FileCollector(root);
   var files = collector.collect([], ['foo.md']);
 
-  assert.deepEqual(files, [`${root}/README.md`]);
+  assert.notOk(files.includes(`${root}/foo.md`));
 });

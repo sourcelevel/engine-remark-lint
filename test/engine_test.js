@@ -25,7 +25,7 @@ QUnit.module('Engine');
 
 QUnit.test('analyzes the markdown files of a directory', function(assert) {
   var stream = new FakeStream();
-  var engine = new Engine(root, { include_paths: [], exclude_paths: [] }, stream);  // eslint-disable-line camelcase
+  var engine = new Engine(root, { include_paths: ['README.md'], exclude_paths: [] }, stream);  // eslint-disable-line camelcase
   engine.run();
 
   var issue = stream.read();
@@ -47,4 +47,18 @@ QUnit.test('analyzes the markdown files of a directory', function(assert) {
   assert.equal(issue.location.path, 'README.md');
   assert.equal(issue.location.lines.begin, 5);
   assert.equal(issue.location.lines.end, 5);
+});
+
+QUnit.test('generates valid issues', function(assert) {
+  var stream = new FakeStream();
+  var engine = new Engine(root, { include_paths: [], exclude_paths: [] }, stream);  // eslint-disable-line camelcase
+  engine.run();
+
+  var issue = stream.read();
+
+  while(issue) {
+    assert.ok(issue.location.lines.begin);
+    assert.ok(issue.location.lines.end);
+    issue = stream.read()
+  }
 });
