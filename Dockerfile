@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:5.7
+FROM mhart/alpine-node:6.3
 MAINTAINER Plataformatec <opensource@plataformatec.com.br>
 
 WORKDIR /usr/src/app
