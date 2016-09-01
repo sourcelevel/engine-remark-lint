@@ -14,8 +14,8 @@
   "dependencies": {
     "fs-jetpack": "^0.9.2",
     "glob": "^7.0.5",
-    "remark": "^5.0.1",
-    "remark-lint": "^4.1.0"
+    "remark": "^6.0.0",
+    "remark-lint": "^5.0.1"
   },
   "engine": "node >= 5.4.0",
   "devDependencies": {
