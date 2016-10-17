@@ -7,7 +7,7 @@
     "url": "https://github.com/plataformatec/engine-remark-lint.git"
   },
   "scripts": {
-    "test": "node test/test_helper.js"
+    "test": "qunit-cli test/*_test.js"
   },
   "author": "Plataformatec <opensource@plataformatec.com.br>",
   "license": "Apache-2.0",
@@ -17,11 +17,11 @@
     "remark": "^6.0.0",
     "remark-lint": "^5.0.1",
     "remark-preset-lint-consistent": "^1.0.0",
-    "remark-preset-lint-recommended": "^1.0.0"
+    "remark-preset-lint-recommended": "^1.0.0",
+    "vfile-reporter": "^3.0.0"
   },
   "engine": "node >= 5.4.0",
   "devDependencies": {
-    "qunit-tap": "^1.5.1",
-    "qunitjs": "^2.0.1"
+    "qunit-cli": "^0.2.0"
   }
 }

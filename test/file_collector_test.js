@@ -1,5 +1,4 @@
-var QUnit = require('qunitjs'),
-    FileCollector = require('../lib/file_collector');
+var FileCollector = require('../lib/file_collector');
 
 var root = `${__dirname}/fixtures`;
 

@@ -1,6 +1,4 @@
-'use strict';
-var QUnit = require('qunitjs'),
-    Engine = require('../lib/engine');
+var Engine = require('../lib/engine');
 
 class FakeStream {
   constructor() {
