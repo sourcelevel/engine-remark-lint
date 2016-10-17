@@ -47,6 +47,22 @@ QUnit.test('analyzes the markdown files of a directory', function(assert) {
   assert.equal(issue.location.lines.end, 5);
 });
 
+QUnit.test('loads remark-lint configurations from presets defined on `.remarkrc`', function(assert) {
+  var stream = new FakeStream();
+  var engine = new Engine(`${root}/preset`, { include_paths: ['duplicated-definition.md'], exclude_paths: [] }, stream);  // eslint-disable-line camelcase
+  engine.run();
+
+  var issue = stream.read();
+
+  assert.equal(issue.type, 'issue');
+  assert.deepEqual(issue.categories, ['Style']);
+  assert.equal(issue.check_name, 'no-duplicate-definitions');
+  assert.equal(issue.description, 'Do not use definitions with the same identifier (1:1)');
+  assert.equal(issue.location.path, 'duplicated-definition.md');
+  assert.equal(issue.location.lines.begin, 2);
+  assert.equal(issue.location.lines.end, 2);
+});
+
 QUnit.test('generates valid issues', function(assert) {
   var stream = new FakeStream();
   var engine = new Engine(root, { include_paths: [], exclude_paths: [] }, stream);  // eslint-disable-line camelcase

@@ -8,7 +8,7 @@ QUnit.test('collects all markdown files of a directory', function(assert) {
   var collector = new FileCollector(root);
   var files = collector.collect([], []);
 
-  assert.equal(158, files.length);
+  assert.equal(159, files.length);
 });
 
 QUnit.test('collects only the given files', function(assert) {
