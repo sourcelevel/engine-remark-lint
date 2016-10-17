@@ -8,6 +8,8 @@ services:
 cache:
   directories:
   - node_modules
+notifications:
+  email: false
 env:
   global:
   - secure: aSX4rTNcoxxUOT6QogZEHXHs2rAwtGr/ys/QwebV0JY3UO8Q7+WeKNoTddOmc3NCLU1+3x30oy22Fb/hfGoZzpsnyhPDsAcVpC/r867vTiPBMpG+CHfaD360/rLE6VhSNfQEAzJKEqdrefUnl4uqsFox3nwa1A81cQThho2QCoaUnGAUwbGa5FCPUltK/uzfeW2vGr/9Ed6MN4N3BHTT8zWOkvngLCfTZqH8lW4P5sLFRsY4SX3c+mp42gt6Dn5vOsLk/dSGq7pqg54it0t2qtBw6AuAk+Er37vlFjhRof6fFc6/QpUQwoJAV0M4V9tzrGp50PIrC4/yjnlizXC3jllFyZAxoecedP88e7s9KsfRqtIAHSpBSG1AMOaaAZolsUqHTjiiSoxFRfSJn2K+V4p5x6Xc3ibmBfN8beKYE8oZpfk25Rveju1gbZN1N65+fclxztGL5s6/OZXA5mxhB/Rp9/H26D9Js41+EXn9F9j8fHmRsnF0zqNJnwg+8mOpBxulkxF16ZF3YC5SJ7wrQ+qD+Iws60FV1QKdNWT2sH7C6J9COBST3PJdisEUYC0K92jDgrS+7EFrF2m/Vj7b+3dHn8Mf9FaOCBWNm+MGQWeWPZz0nY5OCYuu+ojfyNaHbUtVRP1b4zoCli8PIb3kYnMkw3Eu1DhY9OhhHKLzeiw=
