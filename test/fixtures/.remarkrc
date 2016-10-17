@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "lint": {
+      "heading-increment": true,
+      "maximum-line-length": true
+    }
+  }
+}
