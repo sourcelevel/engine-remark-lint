@@ -14,7 +14,7 @@
   "dependencies": {
     "fs-jetpack": "^0.10.0",
     "glob": "^7.0.5",
-    "remark": "^6.0.0",
+    "remark": "^6.2.0",
     "remark-lint": "^5.0.1",
     "remark-preset-lint-consistent": "^1.0.0",
     "remark-preset-lint-recommended": "^1.0.0",
