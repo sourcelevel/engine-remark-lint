@@ -7,7 +7,7 @@
     "url": "https://github.com/plataformatec/engine-remark-lint.git"
   },
   "scripts": {
-    "test": "qunit-cli test/*_test.js"
+    "test": "mocha --ui tdd"
   },
   "author": "Plataformatec <opensource@plataformatec.com.br>",
   "license": "Apache-2.0",
@@ -22,6 +22,7 @@
   },
   "engine": "node >= 5.4.0",
   "devDependencies": {
-    "qunit-cli": "^0.2.0"
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }

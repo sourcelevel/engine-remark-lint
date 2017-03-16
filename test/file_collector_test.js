@@ -1,26 +1,26 @@
-var FileCollector = require('../lib/file_collector');
+const assert = require('chai').assert,
+    FileCollector = require('../lib/file_collector'),
+    root = `${__dirname}/fixtures`;
 
-var root = `${__dirname}/fixtures`;
+suite('FileCollector', () => {
+  test('collects all markdown files of a directory', () => {
+    const collector = new FileCollector(root);
+    const files = collector.collect([], []);
 
-QUnit.module('FileCollector');
+    assert.equal(159, files.length);
+  });
 
-QUnit.test('collects all markdown files of a directory', function(assert) {
-  var collector = new FileCollector(root);
-  var files = collector.collect([], []);
+  test('collects only the given files', () => {
+    const collector = new FileCollector(root);
+    const files = collector.collect(['foo.md'], []);
 
-  assert.equal(159, files.length);
-});
+    assert.deepEqual(files, [`${root}/foo.md`]);
+  });
 
-QUnit.test('collects only the given files', function(assert) {
-  var collector = new FileCollector(root);
-  var files = collector.collect(['foo.md'], []);
+  test('excludes specific files', () => {
+    const collector = new FileCollector(root);
+    const files = collector.collect([], ['foo.md']);
 
-  assert.deepEqual(files, [`${root}/foo.md`]);
-});
-
-QUnit.test('excludes specific files', function(assert) {
-  var collector = new FileCollector(root);
-  var files = collector.collect([], ['foo.md']);
-
-  assert.notOk(files.includes(`${root}/foo.md`));
+    assert.notOk(files.includes(`${root}/foo.md`));
+  });
 });
