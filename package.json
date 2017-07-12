@@ -22,7 +22,7 @@
   },
   "engine": "node >= 5.4.0",
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.1.0",
     "mocha": "^3.2.0"
   }
 }
