@@ -1,6 +1,6 @@
 .PHONY: image test
 
-IMAGE_NAME ?= plataformatec/engine-remark-lint
+IMAGE_NAME ?= sourcelevel/engine-remark-lint
 
 image:
 	docker build --rm -t $(IMAGE_NAME) .
