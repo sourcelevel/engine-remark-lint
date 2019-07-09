@@ -1,5 +1,5 @@
 FROM node:6.10.0-slim
-MAINTAINER Plataformatec <opensource@plataformatec.com.br>
+MAINTAINER SourceLevel <support@sourcelevel.io>
 
 WORKDIR /usr/src/app
 COPY package.json /usr/src/app/
