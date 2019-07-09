@@ -2,8 +2,8 @@
   "name": "remark-lint",
   "description": "Style checking for Markdown",
   "maintainer": {
-    "name": "Plataformatec",
-    "email": "plataformatec@plataformatec.com.br"
+    "name": "SourceLevel",
+    "email": "support@sourcelevel.io"
   },
   "languages": ["Markdown"],
   "spec_version": "0.0.1",
