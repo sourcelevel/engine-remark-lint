@@ -1,5 +1,7 @@
 # engine-remark-lint
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sourcelevel/engine-remark-lint.svg)](https://greenkeeper.io/)
+
 `engine-remark-lint` is a Docker container that wraps
 [remark-lint](http://github.com/wooorm/remark-lint) as a standalone executable,
 following the [Code Climate Engine spec](https://github.com/codeclimate/spec)
