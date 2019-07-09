@@ -1,4 +1,4 @@
-FROM node:6.10.0-slim
+FROM node:6.10.0-alpine
 MAINTAINER SourceLevel <support@sourcelevel.io>
 
 WORKDIR /usr/src/app
